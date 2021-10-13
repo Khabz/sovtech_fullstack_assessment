@@ -5,8 +5,8 @@ import getPersonQuery from '@src/graphql/schemas/queries/getPersonQuery';
 const query = new GraphQLObjectType({
   name: 'People',
   fields: {
-    people: getAllPeopleQuery,
-    person: getPersonQuery,
+    getAllPeople: getAllPeopleQuery,
+    getPerson: getPersonQuery,
   },
 });
 

@@ -3,8 +3,8 @@ schema {
 }
 
 type People {
-  people(page: Int, next: String, prev: String): PeopleResponse
-  person(name: String): Person
+  getAllPeople(page: Int, next: String, prev: String): PeopleResponse
+  getPerson(name: String): Person
 }
 
 type PeopleResponse {
