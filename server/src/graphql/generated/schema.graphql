@@ -1,0 +1,28 @@
+schema {
+  query: People
+}
+
+type People {
+  people(page: Int, next: String, prev: String): PeopleResponse
+}
+
+type PeopleResponse {
+  count: Int
+  next: String
+  previous: String
+  results: [Person]
+}
+
+type Person {
+  """The name of the person"""
+  name: String
+
+  """The height of the person"""
+  height: String
+
+  """The mass of the person"""
+  mass: String
+
+  """The location of the person"""
+  homeworld: String
+}
