@@ -4,6 +4,7 @@ schema {
 
 type People {
   people(page: Int, next: String, prev: String): PeopleResponse
+  person(name: String): Person
 }
 
 type PeopleResponse {

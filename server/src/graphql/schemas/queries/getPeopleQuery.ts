@@ -1,8 +1,5 @@
 import { GraphQLInt, GraphQLString } from 'graphql';
-import {
-  QueryGetAllPeopleArgs,
-  PeopleResponse,
-} from '@src/graphql/generated/graphql';
+import { PeopleResponse } from '@src/graphql/generated/graphql';
 import GqlPeopleResponse from '@src/graphql/typeDefs/GqlPeopleResponse';
 import dataSource from '@src/data/peopleService';
 
