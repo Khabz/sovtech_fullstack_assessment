@@ -7,7 +7,9 @@ import { setPeople } from "../../pages/Home/slice";
 import { ContentContainer, PeopleListContainer } from "./peopleList.styles";
 import { makeSelectPeople } from "../../pages/Home/selector";
 // Icons
-import { FaUserAstronaut } from 'react-icons/fa'
+import { FaUserAstronaut, FaWeight } from 'react-icons/fa';
+import { GiBodyHeight } from 'react-icons/gi';
+import { BiPlanet } from 'react-icons/bi';
 
 const actionDispatch = (dispatch: Dispatch) => ({
   setPeople: (people: People_getAllPeople) => dispatch(setPeople(people)),
@@ -46,6 +48,24 @@ const PeopleList = () => {
                   {person?.name}
                 </span>
               </h3>
+              <p>
+                <GiBodyHeight />
+                <span>
+                  {person?.height}
+                </span>
+              </p>
+              <p>
+                <FaWeight />
+                <span>
+                  {person?.mass}
+                </span>
+              </p>
+              <p>
+                <BiPlanet />
+                <span>
+                  {person?.homeworld}
+                </span>
+              </p>
             </div>
           ))}
       </ContentContainer>

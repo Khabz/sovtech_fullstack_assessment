@@ -16,15 +16,16 @@ export const ContentContainer = styled.div`
   align-items: center;
 
   .boxWrap {
+    cursor: pointer;
     background-color: gray;
     border-radius: 12px;
-    height: 100px;
+    height: auto;
     margin: 50px;
     padding: 20px;
     align-content: center;
     text-align: center;
 
-    h3 {
+    h3, p {
       span {
         margin-left: 10px;
       }
