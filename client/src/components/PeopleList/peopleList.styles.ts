@@ -15,6 +15,33 @@ export const ContentContainer = styled.div`
   justify-content: center;
   align-items: center;
 
+  .events {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .pagination {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 10px;
+
+    .pagination__button {
+      margin: 0 10px;
+      height: 50px;
+      width: 50px;
+      border-radius: 25px;
+      color: #FFFFFF;
+      background-color: #000000;
+    }
+  }
+
   .boxWrap {
     cursor: pointer;
     background-color: gray;

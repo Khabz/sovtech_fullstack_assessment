@@ -15,3 +15,14 @@ export const GET_ALL_PEOPLE = gql`
     }
   }
 `;
+
+export const GET_PERSON = gql`
+  query Person($name: String) {
+    getPerson(name: $name) {
+      name
+      height
+      mass
+      homeworld
+    }
+  }
+`;

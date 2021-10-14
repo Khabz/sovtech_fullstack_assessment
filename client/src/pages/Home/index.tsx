@@ -6,7 +6,7 @@ import PeopleList from '../../components/PeopleList'
 const HomePage = () => {
     return (
         <HomeContainer>
-            <Banner />
+            <Banner title={"Star Wars Characters"} requireBack={false} />
             <PeopleList />
         </HomeContainer>
     );

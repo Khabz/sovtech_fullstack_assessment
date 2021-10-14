@@ -1,5 +1,5 @@
 type Query {
-    getAllPeople(page: Int!, next: String!, prev: String!) : PeopleResponse!
+    getAllPeople(page: Int!) : PeopleResponse!
     getPerson(name: String): Person
 }
 

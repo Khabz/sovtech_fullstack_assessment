@@ -3,7 +3,7 @@ import axios from 'axios';
 const baseURL = 'https://swapi.dev/api/people';
 
 // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
-const getAllPeople = async (page: number, next: string, prev: string) => {
+const getAllPeople = async (page: number) => {
   const response = await axios.get(`${baseURL}/?page=${page}`);
 
   const { results, next: nextPage, previous, count } = response.data;
