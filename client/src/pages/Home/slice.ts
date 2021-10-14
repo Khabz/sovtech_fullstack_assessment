@@ -1,9 +1,9 @@
 import { IHomePageState } from './type';
 import { createSlice } from "@reduxjs/toolkit";
-import { People_getAllPeople_results } from '../../services/peopleService/__generated__/People';
+import { People_getAllPeople } from '../../services/peopleService/__generated__/People';
 
 const initialState: IHomePageState = {
-    people: [] as unknown as People_getAllPeople_results
+    people: [] as unknown as People_getAllPeople
 };
 
 export const HomePageSlice = createSlice({
