@@ -24,6 +24,12 @@ export const ContentContainer = styled.div`
     margin-top: 10px;
   }
 
+  .results__count {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+  }
+
   .pagination {
     display: flex;
     flex-direction: row;
@@ -33,19 +39,25 @@ export const ContentContainer = styled.div`
     margin-bottom: 10px;
 
     .pagination__button {
-      margin: 0 10px;
+      cursor: pointer;
+      margin: 0px 10px;
       height: 50px;
       width: 50px;
       border-radius: 25px;
-      color: #FFFFFF;
-      background-color: #000000;
+      color: #000000;
+      background-color: #FFFFFF;
+      box-shadow: 2px 2px 10px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .pagination__button:hover {
+      box-shadow: 2px 2px 10px 5px rgba(0, 0, 0, 0.3);
     }
   }
 
   .boxWrap {
+    background-color: #FFFFFF;
+    box-shadow: 2px 2px 10px 5px rgba(0, 0, 0, 0.1);
     cursor: pointer;
-    background-color: gray;
-    border-radius: 12px;
     height: auto;
     margin: 50px;
     padding: 20px;
@@ -57,5 +69,9 @@ export const ContentContainer = styled.div`
         margin-left: 10px;
       }
     }
+  }
+
+  .boxWrap:hover {
+    box-shadow: 2px 2px 10px 5px rgba(0, 0, 0, 0.3);
   }
 `;

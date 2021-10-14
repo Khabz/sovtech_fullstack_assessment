@@ -112,6 +112,17 @@ const PeopleList = () => {
     }
   };
 
+  // render results count
+  const renderResultsCount = () => {
+    if (count) {
+      return (
+        <div className="results__count">
+          <span>{count} results found</span>
+        </div>
+      );
+    }
+  };
+
   useEffect(() => {
     fetchPeople(page);
   });
@@ -119,6 +130,7 @@ const PeopleList = () => {
   return (
     <PeopleListContainer>
       <ContentContainer>
+        {renderResultsCount()}
         {renderPeopleList()}
         {renderPagination()}
       </ContentContainer>

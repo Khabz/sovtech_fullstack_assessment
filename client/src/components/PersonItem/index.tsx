@@ -5,10 +5,8 @@ import { createSelector } from "reselect";
 import { makeSelectPerson } from "../../pages/Person/selector";
 import { setPerson } from "../../pages/Person/slice";
 import peopleService from "../../services/peopleService";
-import {
-  Person_getPerson,
-  Person,
-} from "../../services/peopleService/__generated__/Person";
+import { Person_getPerson } from "../../services/peopleService/__generated__/Person";
+import { PersonItemContainer } from "./personItem.styles";
 
 interface Props {
   name: string;
@@ -47,10 +45,20 @@ const PersonItem = (props: Props) => {
   });
 
   const renderPerson = () => {
-    return <div>{mass}</div>;
+    if (!error && !personName) return <div>Loading...</div>;
+
+    if (error) return <div>Something went wrong.....</div>;
+
+    if (!personName) return <div>No person found</div>;
+
+    return (
+      <div>
+        <h2>{personName}</h2>
+      </div>
+    );
   };
 
-  return <div>{renderPerson()}</div>;
+  return <PersonItemContainer>{renderPerson()}</PersonItemContainer>;
 };
 
 export default PersonItem;

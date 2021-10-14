@@ -11,8 +11,6 @@ const getAllPeopleQuery = {
   resolve: async (_: void, _args): Promise<PeopleResponse> => {
     const { page } = _args;
 
-    console.log(`getAllPeopleQuery: page: ${page}`);
-
     const response = await dataSource.getAllPeople(page);
 
     return response;
