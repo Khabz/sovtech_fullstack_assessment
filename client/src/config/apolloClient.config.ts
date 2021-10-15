@@ -3,7 +3,9 @@ import dotenv from "dotenv";
 
 dotenv.config();
 
+const { REACT_APP_API_URL } = process.env;
+
 export const apolloClient = new ApolloClient({
-   uri: "http://localhost:4000/graphql",
+   uri: `${REACT_APP_API_URL}`,
    cache: new InMemoryCache(),
 })
