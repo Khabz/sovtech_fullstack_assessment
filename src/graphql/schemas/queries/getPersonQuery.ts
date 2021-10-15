@@ -1,7 +1,7 @@
-import { GraphQLObjectType, GraphQLString } from 'graphql';
-import { Person } from '@src/graphql/generated/graphql';
-import GqlPerson from '@src/graphql/typeDefs/GqlPerson';
-import dataSource from '@src/data/peopleService';
+import { GraphQLString } from 'graphql';
+import { Person } from '../../generated/graphql';
+import GqlPerson from '../../typeDefs/GqlPerson';
+import dataSource from '../../../data/peopleService';
 
 const getPersonQuery = {
   type: GqlPerson,

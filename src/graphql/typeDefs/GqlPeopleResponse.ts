@@ -4,7 +4,7 @@ import {
   GraphQLInt,
   GraphQLList,
 } from 'graphql';
-import GqlPerson from '@src/graphql/typeDefs/GqlPerson';
+import GqlPerson from './GqlPerson';
 
 const GqlPeopleResponse = new GraphQLObjectType({
   name: 'PeopleResponse',

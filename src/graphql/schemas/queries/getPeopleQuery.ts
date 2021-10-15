@@ -1,7 +1,7 @@
 import { GraphQLInt, GraphQLString } from 'graphql';
-import { PeopleResponse } from '@src/graphql/generated/graphql';
-import GqlPeopleResponse from '@src/graphql/typeDefs/GqlPeopleResponse';
-import dataSource from '@src/data/peopleService';
+import { PeopleResponse } from '../../generated/graphql';
+import GqlPeopleResponse from '../../typeDefs/GqlPeopleResponse';
+import dataSource from '../../../data/peopleService';
 
 const getAllPeopleQuery = {
   type: GqlPeopleResponse,

@@ -5,8 +5,8 @@ import dotenv from 'dotenv-safe';
 import cors from 'cors';
 import compression from 'compression';
 import path from 'path';
-import schema from '@src/graphql/schemas/schema';
-import { performAstCodegen } from '@src/codegen';
+import schema from './graphql/schemas/schema';
+import { performAstCodegen } from './codegen';
 
 dotenv.config();
 const PORT = process.env.PORT || 4000;
@@ -29,7 +29,7 @@ const startServer = async () => {
   app.use(express.static('public'));
 
   app.get('*', (req: Request, res: Response) => {
-    res.sendFile(path.resolve(__dirname, 'public', 'index.html'));
+    res.sendFile(path.resolve(__dirname, 'build', 'index.html'));
   });
 
   httpServer.listen(PORT, () => {

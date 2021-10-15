@@ -1,5 +1,5 @@
 import { GraphQLSchema } from 'graphql';
-import queries from '@src/graphql/schemas/queries/index';
+import queries from './queries/index';
 
 const schema: GraphQLSchema = new GraphQLSchema({
   query: queries,

@@ -1,6 +1,6 @@
 import { GraphQLObjectType } from 'graphql';
-import getAllPeopleQuery from '@src/graphql/schemas/queries/getPeopleQuery';
-import getPersonQuery from '@src/graphql/schemas/queries/getPersonQuery';
+import getAllPeopleQuery from './getPeopleQuery';
+import getPersonQuery from './getPersonQuery';
 
 const query = new GraphQLObjectType({
   name: 'People',
